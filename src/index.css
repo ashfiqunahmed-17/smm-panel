@@ -1,0 +1,82 @@
+@import "@fontsource/poppins/latin-400.css";
+@import "@fontsource/poppins/latin-500.css";
+@import "@fontsource/poppins/latin-600.css";
+@import "@fontsource/poppins/latin-700.css";
+@import "@fontsource/poppins/latin-800.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  color: #151a2d;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100svh;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #ffd3a6;
+  color: #151a2d;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: #ea6c1c;
+  text-transform: uppercase;
+}
+
+.section-eyebrow::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 8px;
+  background-repeat: no-repeat;
+  background-position: center center, center center;
+  background-size: 8px 8px, 100% 2px;
+  background-image: radial-gradient(circle, #ea6c1c 3px, transparent 3.5px),
+    linear-gradient(#ea6c1c, #ea6c1c);
+}
+
+.container-x {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container-x {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-x {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
